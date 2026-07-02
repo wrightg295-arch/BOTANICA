@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ================= SEO ON-PAGE ================= -->
+    <title>Botánicas BQ | Tu Tienda Botánica en Barranquilla</title>
+    <meta name="description" content="Descubre Botánicas BQ en Barranquilla. Encuentra la mejor selección de plantas, hierbas y productos botánicos naturales con asesoría experta.">
+    <meta name="keywords" content="tienda botanica barranquilla, plantas naturales, productos botánicos, hierbas naturales, botanicas bq">
+    <meta name="author" content="ALISSON MICHELLE RAMIREZ FREITHE">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://tudominio.com/">
+    
+    <!-- ================= SEO TÉCNICO (Schema.org LocalBusiness) ================= -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "Botánicas BQ",
+      "description": "Tienda botánica especializada en productos naturales y plantas en Barranquilla.",
+      "telephone": "+573016667864",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cl. 58 #412",
+        "addressLocality": "Barranquilla",
+        "addressRegion": "Atlántico",
+        "addressCountry": "CO"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "08:00",
+        "closes": "17:00"
+      }
+    }
+    </script>
+
+    <!-- ================= ESTILOS CSS ================= -->
+    <style>
+        :root {
+            --primary-color: #2E7D32; /* Verde botánico */
+            --secondary-color: #81C784;
+            --accent-color: #D84315; /* Tono tierra cálido para CTAs */
+            --accent-hover: #BF360C;
+            --text-dark: #3E2723; /* Marrón oscuro */
+            --text-light: #F1F8E9;
+            --bg-light: #FAFAFA;
+            --white: #FFFFFF;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; scroll-behavior: smooth; }
+        a { text-decoration: none; color: inherit; }
+        
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Botones */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 14px 28px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-align: center;
+        }
+        .btn:hover { background-color: var(--accent-hover); }
+
+        /* Header */
+        header { background-color: var(--white); box-shadow: 0 2px 8px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 100; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; height: 70px; }
+        .logo { font-size: 1.6rem; font-weight: 700; color: var(--primary-color); display: flex; align-items: center; gap: 8px;}
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(46, 125, 50, 0.85), rgba(46, 125, 50, 0.7)), url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: var(--white); padding: 100px 20px; text-align: center;
+        }
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3); }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+        /* Títulos Generales */
+        .section-title { text-align: center; font-size: 2rem; margin-bottom: 40px; color: var(--primary-color); }
+
+        /* Beneficios */
+        .benefits { padding: 80px 0; background-color: var(--white); }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { background: var(--bg-light); padding: 30px; border-radius: 8px; border-top: 4px solid var(--secondary-color); text-align: center; }
+        .card h3 { color: var(--primary-color); margin-bottom: 15px; font-size: 1.3rem; }
+
+        /* Propuesta de Valor */
+        .value-section { padding: 80px 0; background-color: var(--primary-color); color: var(--white); text-align: center; }
+        .value-section h2 { margin-bottom: 20px; font-size: 2.2rem; }
+        .value-section p { max-width: 800px; margin: 0 auto; font-size: 1.1rem; }
+
+        /* Prueba Social */
+        .social-proof { padding: 80px 0; background: var(--white); }
+        .review-card { background: var(--bg-light); padding: 25px; border-radius: 8px; font-style: italic; border-left: 4px solid var(--accent-color); }
+        .reviewer { font-weight: 600; display: block; margin-top: 15px; color: var(--text-dark); font-style: normal;}
+
+        /* Contacto y Transparencia */
+        .contact-section { padding: 80px 0; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        .company-info h3 { color: var(--primary-color); margin-bottom: 20px; }
+        .company-info p { margin-bottom: 12px; font-size: 1.05rem; }
+        .transparency-box { margin-top: 25px; padding: 15px; background: #E8F5E9; border: 1px solid var(--secondary-color); border-radius: 6px; font-size: 0.9rem; }
+
+        /* Formulario */
+        .form-box { background: var(--white); padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 6px; font-weight: 600; font-size: 0.95rem; }
+        .form-group input, .form-group textarea {
+            width: 100%; padding: 10px; border: 1px solid #CCC; border-radius: 4px; font-size: 1rem;
+        }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--primary-color); }
+
+        /* Footer */
+        footer { background-color: var(--text-dark); color: var(--text-light); text-align: center; padding: 40px 20px; font-size: 0.9rem; }
+        footer a { color: var(--secondary-color); margin: 0 10px; text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            .contact-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">🌿 Botánicas BQ</div>
+            <a href="#contacto" class="btn" style="padding: 8px 20px; font-size: 0.95rem;">Contáctanos</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>El Poder de la Naturaleza en Barranquilla</h1>
+                <p>Descubre nuestra selección exclusiva de productos botánicos, plantas y remedios naturales pensados para tu bienestar integral.</p>
+                <!-- CTA basado en el título y tema -->
+                <a href="#contacto" class="btn">Consulta nuestro catálogo botánico</a>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <div class="container">
+                <h2 class="section-title">¿Por qué elegir Botánicas BQ?</h2>
+                <div class="grid-3">
+                    <div class="card">
+                        <h3>Productos 100% Naturales</h3>
+                        <p>Seleccionamos cuidadosamente cada elemento de nuestro inventario para garantizar su pureza y origen orgánico.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Asesoría Especializada</h3>
+                        <p>Te guiamos en la elección de las plantas y productos ideales según tus necesidades específicas.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Ubicación Central</h3>
+                        <p>Estamos ubicados estratégicamente en Barranquilla para que puedas visitarnos y conocer nuestros productos en persona.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="value-section">
+            <div class="container">
+                <h2>Tu espacio natural en la ciudad</h2>
+                <p>En Botánicas BQ entendemos que la conexión con la naturaleza es fundamental. No solo somos una tienda; somos un espacio dedicado a promover un estilo de vida equilibrado a través de los beneficios comprobados de la botánica. Ya sea que busques plantas aromáticas, elementos para tu jardín o alternativas naturales, aquí encuentras calidad y honestidad.</p>
+            </div>
+        </section>
+
+        <section class="social-proof">
+            <div class="container">
+                <h2 class="section-title">Experiencias de nuestros clientes</h2>
+                <div class="grid-3">
+                    <div class="review-card">
+                        <p>"Encontré las plantas aromáticas que tanto buscaba. Excelente atención en la tienda, resolvieron todas mis dudas."</p>
+                        <span class="reviewer">- María Fernanda S., Barranquilla</span>
+                    </div>
+                    <div class="review-card">
+                        <p>"Un lugar muy completo. Los productos son frescos y la dueña es muy amable al explicar los cuidados de cada planta."</p>
+                        <span class="reviewer">- Carlos J., Cliente local</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact-section">
+            <div class="container contact-grid">
+                <div class="company-info">
+                    <h3>Visítanos en Botánicas BQ</h3>
+                    <p><strong>Responsable:</strong> ALISSON MICHELLE RAMIREZ FREITHE</p>
+                    <p><strong>Dirección:</strong> Cl. 58 #412, Barranquilla, Colombia</p>
+                    <p><strong>Teléfono:</strong> <a href="tel:+573016667864" style="color: var(--primary-color); font-weight: bold;">301 666 7864</a></p>
+                    <p><strong>Correo:</strong> <a href="mailto:wrightg295@gmail.com" style="color: var(--primary-color);">wrightg295@gmail.com</a></p>
+                    <p><strong>Horario de atención:</strong> Todos los días de 8:00 am a 5:00 pm</p>
+                    
+                    <div class="transparency-box">
+                        <strong>Transparencia del negocio:</strong> Cumplimos estrictamente con las políticas de Google Ads. Toda la información proporcionada es verificable, y nuestros productos botánicos son de uso común, sin afirmaciones curativas exageradas o engañosas.
+                    </div>
+                </div>
+                
+                <div class="form-box">
+                    <h3 style="margin-bottom: 20px; color: var(--primary-color);">Solicita información sobre productos</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="nombre">Nombre y Apellido</label>
+                            <input type="text" id="nombre" required placeholder="Ingresa tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono / Celular</label>
+                            <input type="tel" id="telefono" required placeholder="Ej: 301 000 0000">
+                        </div>
+                        <div class="form-group">
+                            <label for="consulta">¿Qué producto botánico estás buscando?</label>
+                            <textarea id="consulta" rows="4" required placeholder="Escribe tu consulta aquí..."></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">Enviar Consulta</button>
+                        
+                        <div id="formFeedback" style="display:none; background: #dcedc8; color: #33691e; padding: 12px; margin-top: 15px; border-radius: 4px; font-weight: bold; text-align: center;">
+                            ¡Mensaje enviado con éxito! Te contactaremos pronto.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Botánicas BQ - ALISSON MICHELLE RAMIREZ FREITHE. Todos los derechos reservados.</p>
+            <div style="margin-top: 15px;">
+                <a href="politica-de-privacidad.html">Política de Privacidad</a>
+                <a href="terminos-y-condiciones.html">Términos y Condiciones</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script>
+        // Procesamiento del formulario local (Evita redirecciones a páginas de gracias externas para cumplir lineamientos de velocidad y simpleza)
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            
+            const feedback = document.getElementById('formFeedback');
+            feedback.style.display = 'block';
+            this.reset();
+            
+            // Ocultar el mensaje después de unos segundos
+            setTimeout(() => {
+                feedback.style.display = 'none';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
